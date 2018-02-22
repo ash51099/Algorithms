@@ -55,7 +55,7 @@ class FordFulkerson{
 			int max = INF;  // will contain max flow possible from one path
 			int v = sink;
 			int u;
-			while(parent[v]!=source)
+			while(v!=source)
 			{
 			//	System.out.println("inside updation loop");
 				u = parent[v];
@@ -64,7 +64,7 @@ class FordFulkerson{
 				v = u;
 			}
 			v = sink;
-			while(parent[v]!=source)
+			while(v!=source)
 			{
 				u = parent[v];
 				Residual[u][v]-=max;
